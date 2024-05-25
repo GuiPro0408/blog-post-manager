@@ -1,5 +1,5 @@
 // src/App.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import AddPostForm from './components/AddPostForm';
 import EditPostForm from './components/EditPostForm';
@@ -8,7 +8,16 @@ import PostView from './components/PostView';
 import styles from './App.module.css';
 
 const App = () => {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState(() => {
+    // Load posts from local storage
+    const savedPosts = localStorage.getItem('posts');
+    return savedPosts ? JSON.parse(savedPosts) : [];
+  });
+
+  useEffect(() => {
+    // Save posts to local storage whenever they change
+    localStorage.setItem('posts', JSON.stringify(posts));
+  }, [posts]);
 
   const addPost = (post) => {
     setPosts([...posts, post]);
@@ -20,7 +29,7 @@ const App = () => {
   };
 
   const editPost = (index, updatedPost) => {
-    const newPosts = posts.map((post, i) => (i === parseInt(index) ? updatedPost : post));
+    const newPosts = posts.map((post, i) => (i === index ? updatedPost : post));
     setPosts(newPosts);
   };
 
