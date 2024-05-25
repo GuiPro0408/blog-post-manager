@@ -91,3 +91,8 @@ blog-post-manager
     ├── reportWebVitals.js
     └── setupTests.js
 ```
+
+## Deployment
+
+Deployed using Netlify at [https://blogpostmanager.netlify.app/](https://blogpostmanager.netlify.app/)
+
