@@ -30,6 +30,13 @@ p {
   margin-bottom: 10px;
 }
 
+.button_container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 10px;
+}
+
 button {
   background-color: #dc3545;
   color: white;
@@ -37,8 +44,11 @@ button {
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
-  margin-right: 10px;
   transition: background-color 0.3s ease-in-out;
+}
+
+button.button_edit {
+  background-color: #0004ff;
 }
 
 button:hover {

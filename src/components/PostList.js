@@ -12,9 +12,11 @@ const PostList = ({ posts, deletePost, setCurrentPost }) => {
         <div key={index} className={styles.post}>
           <h2>{post.title}</h2>
           <p>{post.content.substring(0, 100)}...</p>
-          <Link to={`/post/${index}`}>Read More</Link>
-          <button onClick={() => navigate(`/edit/${index}`)}>Edit</button>
-          <button onClick={() => deletePost(index)}>Delete</button>
+          <div className= {styles.button_container}>
+            <Link to={`/post/${index}`}>Read More</Link>
+            <button onClick={() => navigate(`/edit/${index}`)} className= {styles.button_edit}>Edit</button>
+            <button onClick={() => deletePost(index)}>Delete</button>
+          </div>
         </div>
       ))}
     </div>
