@@ -1,0 +1,39 @@
+/* src/components/PostView.module.css */
+.post-view {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #666;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+a {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+a:hover {
+  background-color: #0056b3;
+}

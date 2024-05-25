@@ -1,71 +1,91 @@
-# Getting Started with Create React App
+# Blog Post Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple blog post manager built with React. It allows users to add, view, and delete blog posts. The application uses React Router for navigation and CSS modules for styling.
 
-## Available Scripts
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Future Improvements](#future-improvements)
+- [License](#license)
 
-In the project directory, you can run:
+## Features
+- **Add Post**: A form to input the title and content of a new blog post with a submit button to add the post to the list.
+- **View Posts**: Display all posts in a grid format with the title and a truncated version of the content. Full posts can be viewed via a "Read More" link.
+- **Delete Post**: Each post has a delete button that removes the post from the list.
+- **Styling**: Uses CSS modules for styling the application to ensure an aesthetically pleasing UI.
+- **Routing**: Utilizes React Router for navigation between different views.
 
-### `npm start`
+## Installation
+To run this project locally, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/blog-post-manager.git
+   cd blog-post-manager
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm test`
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Open your browser and navigate to `http://localhost:3000` to see the application in action.
 
-### `npm run build`
+## Usage
+### Adding a Post
+1. Navigate to the "Add Post" page using the navigation links.
+2. Fill in the title and content fields.
+3. Click the "Submit" button to add the post.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Viewing Posts
+1. The homepage displays a grid of all posts.
+2. Click on the "Read More" link to view the full content of a post.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Deleting a Post
+1. On the homepage, each post has a "Delete" button.
+2. Click the "Delete" button to remove the post from the list.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Structure
+```
+blog-post-manager
+│-- .gitignore
+│-- README.md
+│-- package-lock.json
+│-- package.json
+│-- public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+└── src
+    ├── components
+    │   ├── AddPostForm.js
+    │   ├── AddPostForm.module.css
+    │   ├── PostList.js
+    │   ├── PostList.module.css
+    │   ├── PostView.js
+    │   ├── PostView.module.css
+    ├── App.js
+    ├── App.module.css
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    ├── reportWebVitals.js
+    └── setupTests.js
+```
 
-### `npm run eject`
+## Future Improvements
+- **Unit Testing**: Add unit tests to ensure the reliability of the application.
+- **Edit Post**: Implement functionality to edit existing posts.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# blog-post-manager
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
