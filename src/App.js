@@ -9,7 +9,6 @@ import styles from './App.module.css';
 
 const App = () => {
   const [posts, setPosts] = useState([]);
-  const [currentPost, setCurrentPost] = useState(null);
 
   const addPost = (post) => {
     setPosts([...posts, post]);
@@ -21,8 +20,7 @@ const App = () => {
   };
 
   const editPost = (index, updatedPost) => {
-    const newPosts = posts.map((post, i) => (i === index ? updatedPost : post)); // updatedPost is the new post object and post is the existing post object
-    console.log(newPosts);
+    const newPosts = posts.map((post, i) => (i === parseInt(index) ? updatedPost : post));
     setPosts(newPosts);
   };
 
@@ -34,9 +32,9 @@ const App = () => {
           <Link to="/">Home</Link> | <Link to="/add">Add Post</Link>
         </nav>
         <Routes>
-          <Route path="/" element={<PostList posts={posts} deletePost={deletePost} setCurrentPost={setCurrentPost} />} />
+          <Route path="/" element={<PostList posts={posts} deletePost={deletePost} />} />
           <Route path="/add" element={<AddPostForm addPost={addPost} />} />
-          <Route path="/edit/:id" element={<EditPostForm posts={posts} editPost={editPost} currentPost={currentPost} />} />
+          <Route path="/edit/:id" element={<EditPostForm posts={posts} editPost={editPost} />} />
           <Route path="/post/:id" element={<PostView posts={posts} />} />
         </Routes>
       </div>

@@ -14,11 +14,10 @@ const EditPostForm = ({ posts, editPost }) => {
       setTitle(posts[id].title);
       setContent(posts[id].content);
     }
-  }, [id, posts]); // [id, posts] are the dependencies of the useEffect hook
+  }, [id, posts]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(id, { title, content });
     editPost(id, { title, content });
     navigate('/');
   };
