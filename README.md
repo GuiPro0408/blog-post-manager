@@ -7,8 +7,6 @@ This is a simple blog post manager built with React. It allows users to add, vie
 - [Installation](#installation)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
-- [Future Improvements](#future-improvements)
-- [License](#license)
 
 ## Features
 - **Add Post**: A form to input the title and content of a new blog post with a submit button to add the post to the list.
@@ -48,6 +46,12 @@ To run this project locally, follow these steps:
 1. The homepage displays a grid of all posts.
 2. Click on the "Read More" link to view the full content of a post.
 
+### Editing a Post
+1. On the homepage, each post has an "Edit" button.
+2. Click the "Edit" button to navigate to the edit form.
+3. Update the title and content fields.
+4. Click the "Update" button to save changes.
+
 ### Deleting a Post
 1. On the homepage, each post has a "Delete" button.
 2. Click the "Delete" button to remove the post from the list.
@@ -70,8 +74,11 @@ blog-post-manager
     ├── components
     │   ├── AddPostForm.js
     │   ├── AddPostForm.module.css
+    │   ├── AddPostForm.test.js
+    │   ├── EditPostForm.js
     │   ├── PostList.js
     │   ├── PostList.module.css
+    │   ├── PostList.test.js
     │   ├── PostView.js
     │   ├── PostView.module.css
     ├── App.js
@@ -82,10 +89,3 @@ blog-post-manager
     ├── reportWebVitals.js
     └── setupTests.js
 ```
-
-## Future Improvements
-- **Unit Testing**: Add unit tests to ensure the reliability of the application.
-- **Edit Post**: Implement functionality to edit existing posts.
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
