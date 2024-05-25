@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+// src/App.js
+import React, { useState } from 'react';
+import AddPostForm from './AddPostForm';
+import PostList from './PostList';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [posts, setPosts] = useState([]);
+
+  const addPost = (post) => {
+    setPosts([...posts, post]);
+  };
+
+  const deletePost = (index) => {
+    const newPosts = posts.filter((_, i) => i !== index);
+    setPosts(newPosts);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Blog Post Manager</h1>
+      <AddPostForm addPost={addPost} />
+      <PostList posts={posts} deletePost={deletePost} />
     </div>
   );
-}
+};
 
 export default App;
