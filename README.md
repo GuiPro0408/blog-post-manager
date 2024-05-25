@@ -11,9 +11,11 @@ This is a simple blog post manager built with React. It allows users to add, vie
 ## Features
 - **Add Post**: A form to input the title and content of a new blog post with a submit button to add the post to the list.
 - **View Posts**: Display all posts in a grid format with the title and a truncated version of the content. Full posts can be viewed via a "Read More" link.
+- **Edit Post**: Each post has an edit button that navigates to a form to update the title and content of the post.
 - **Delete Post**: Each post has a delete button that removes the post from the list.
 - **Styling**: Uses CSS modules for styling the application to ensure an aesthetically pleasing UI.
 - **Routing**: Utilizes React Router for navigation between different views.
+- **Local Storage**: Persists posts in local storage to maintain data between sessions.
 
 ## Installation
 To run this project locally, follow these steps:
